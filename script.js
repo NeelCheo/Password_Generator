@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 // creates the strings to be converted
 var lower ='abcdefghijklmnopqrstuvwxyz'
 var upper = lower.toUpperCase();
@@ -11,8 +10,6 @@ var charLower = lower.split('');
 var charUpper = upper.split('');
 var charSpecial = special.split('');
 var charNumeric = numeric.split('');
-
-
 
 function generatePassword() {
   var password =[]
@@ -42,22 +39,21 @@ function generatePassword() {
     pUpper = window.prompt("Is uppercase required (Y/N)")
   }
   applyCondChar(pUpper,charUpper)
- 
   while(pLower.toUpperCase() != 'N' && pLower.toUpperCase() != 'Y'){
     pLower = window.prompt("Is lowercase required (Y/N)")
   }
   applyCondChar(pLower,charLower)
-
   while(pNumeric.toUpperCase() != 'N' && pNumeric.toUpperCase() != 'Y'){
     pNumeric = window.prompt("Is numeric Required (Y/N)")
   }
   applyCondChar(pNumeric,charNumeric)
-
   while(pSpecial.toUpperCase() != 'N' && pSpecial.toUpperCase() != 'Y'){
     pSpecial = window.prompt("Is special Required (Y/N)")
   }
   applyCondChar(pSpecial,charSpecial)
   // END CHAR COND
+
+  //fills in the rest of the password length with avaiable characters
   while(password.length != pLength){
     password.push(charAll[Math.floor(Math.random()*charAll.length)]);
   }
