@@ -10,5 +10,5 @@ Follow the promprts and a passord will be printed for use
 if invalid input for prompt the prompt will ask again till given a valid input
 (indicated within the prompt which are valid inputs)
 
-website link:
-repo linlk: 
+website link: https://neelcheo.github.io/Password_Generator/
+repo linlk: https://github.com/NeelCheo/Password_Generator.git
